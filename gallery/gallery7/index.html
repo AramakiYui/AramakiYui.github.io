@@ -597,8 +597,7 @@
             
             //判断一个元素是不是出现在窗口(视野)
             function isShow($node){
-                //return $node.offset().top <= $(window).height() + $(window).scrollTop();
-                return $(window).scrollTop() <= $node.offset().top + $(window).height();
+                return $node.offset().top <= $(window).height() + $(window).scrollTop() && $(window).scrollTop() <= $node.offset().top + $node.height();
             }
             //加载图片
             function loadImg($img){
