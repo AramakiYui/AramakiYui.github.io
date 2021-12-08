@@ -1,9 +1,3 @@
-/*!
- * baguetteBox.js
- * @author  feimosi
- * @version 1.11.1
- * @url https://github.com/feimosi/baguetteBox.js
- */
 #baguetteBox-overlay {
   display: none;
   opacity: 0;
@@ -17,7 +11,9 @@
   background-color: #222;
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease; }
+  transition: opacity .5s ease;
+  z-index: 998;
+  }
   #baguetteBox-overlay.visible {
     opacity: 1; }
   #baguetteBox-overlay .full-image {
@@ -37,21 +33,23 @@
       max-height: 100%;
       max-width: 100%;
       vertical-align: middle;
-      -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-         -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-              box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
+      -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+           box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
     #baguetteBox-overlay .full-image figcaption {
       display: block;
       position: absolute;
       bottom: 0;
       width: 100%;
       text-align: center;
-      line-height: 1.8;
+      line-height: -6.2;
+      line-height: 42px;
       white-space: normal;
       color: #ccc;
       background-color: #000;
       background-color: rgba(0, 0, 0, 0.6);
-      font-family: sans-serif; }
+      font-family: sans-serif;
+      font-size: 1.6rem;
+      }
     #baguetteBox-overlay .full-image:before {
       content: "";
       display: inline-block;
@@ -112,8 +110,9 @@
 .baguetteBox-button#next-button, .baguetteBox-button#previous-button {
   top: 50%;
   top: calc(50% - 30px);
-  width: 44px;
-  height: 60px; }
+  width: 54px;
+  height: 82px;
+  }
 
 .baguetteBox-button {
   position: absolute;
@@ -125,7 +124,7 @@
   -moz-border-radius: 15%;
        border-radius: 15%;
   background-color: #323232;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: rgba(50, 50, 50, 0.8);
   color: #ddd;
   font: 1.6em sans-serif;
   -webkit-transition: background-color .4s ease;
@@ -133,24 +132,32 @@
   .baguetteBox-button:focus, .baguetteBox-button:hover {
     background-color: rgba(50, 50, 50, 0.9); }
   .baguetteBox-button#next-button {
-    right: 2%; }
+    right: 3%;
+    }
   .baguetteBox-button#previous-button {
     left: 2%; }
   .baguetteBox-button#close-button {
     top: 20px;
-    right: 2%;
-    right: calc(2% + 6px);
-    width: 30px;
-    height: 30px; }
-  .baguetteBox-button svg {
+    right: calc(2% + 5px);
+    width: 40px;
+    height: 40px;
+    }
+ .baguetteBox-button#close-button svg {
+     position: absolute;
+     left: 6px;
+     top: 4px;
+ }  
+ .baguetteBox-button svg{
+    left: 13px;
+    top: 18px;
+ } 
+.baguetteBox-button#previous-button svg {
     position: absolute;
-    left: 0;
-    top: 0; }
+    left: 4px;
+    /*top: 18px;*/
+    top: calc(50% - 30px);
+}}
 
-/*
-    Preloader
-    Borrowed from http://tobiasahlin.com/spinkit/
-*/
 .baguetteBox-spinner {
   width: 40px;
   height: 40px;
@@ -163,17 +170,21 @@
 
 .baguetteBox-double-bounce1,
 .baguetteBox-double-bounce2 {
-  width: 100%;
-  height: 100%;
-  -moz-border-radius: 50%;
-       border-radius: 50%;
-  background-color: #fff;
-  opacity: .6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-animation: bounce 2s infinite ease-in-out;
-          animation: bounce 2s infinite ease-in-out; }
+  width: 48%;
+    height: 30%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .6;
+    position: absolute;
+    /* top: 282px; */
+    top: 600px;
+    /* bottom: 0; */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-animation: bounce 2s infinite ease-in-out;
+    animation: bounce 2s infinite ease-in-out; }
 
 .baguetteBox-double-bounce2 {
   -webkit-animation-delay: -1s;
