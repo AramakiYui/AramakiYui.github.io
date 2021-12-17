@@ -413,12 +413,10 @@
                     var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
                     if (startYear == todayYear) {
                         document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已运行 " + "<span class= 'white-color'>"+diffDays+"</span>" + " 天 " + "<span class= 'white-color'>"+diffHours+"</span>" +
-                            " 时 " + "<span class= 'white-color'>"+diffMinutes+"</span>" + " 分 " + "<span class= 'white-color'>"+diffSeconds+"</span>" + " 秒";
+                        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffDays + " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒";
                     } else {
                         document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已运行 " + "<span class= 'white-color'>"+diffYears+"</span>" + " 年 " + "<span class= 'white-color'>"+diffDays+"</span>" +
-                            " 天 " + "<span class= 'white-color'>"+diffHours+"</span>" + " 时 " + "<span class= 'white-color'>"+diffMinutes+"</span>" + " 分 " +"<span class= 'white-color'>"+ diffSeconds+"</span>" + " 秒";
+                        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒";
                     }
                 }
                 setInterval(siteTime, 1000);
