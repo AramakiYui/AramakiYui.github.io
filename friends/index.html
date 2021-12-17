@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="gallery, Makki">
+    <meta name="keywords" content="friends, Makki">
     <meta name="description" content="Makki">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>gallery | Makki</title>
+    <title>friends | Makki</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -269,382 +269,201 @@
 
     </div>
 </div>
-    <link rel="stylesheet" href="/libs/baguetteBox/css/baguetteBox.css">
-    <!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
-    <script src="/libs/baguetteBox/js/baguetteBox.js"></script>
-    <!-- 增加相册显示的特效样式 -->
-    <style>
-        .photo {
-            /* padding: 0 40px!important; */
-            padding: 0 0px!important;
-            display: inline-block;
-            position: relative;
-            transition: all .6s;
+<style>
+    .friends-container {
+        margin-top: -100px;
+        margin-bottom: 30px;
+    }
+    .friends-container .tag-title {
+        margin-bottom: 10px;
+        color: #3C4858;
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
+    .frind-ship img {
+        border-radius: 50%;
+    }
+    /* 一下是按钮样式 */
+    .frind-ship {
+        padding: 10px 20px;
+    }
+    .frind-ship .title {
+        display: flex;
+        align-items: center;
+    }
+    .frind-ship .title div {
+        color: #fff;
+        padding-left: 10px;
+    }
+    .frind-ship .title img {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+    .frind-ship .title h1 {
+        padding-bottom: 5px;
+        border-bottom: 2px solid #fff;
+        position: relative;
+        top:-15px;
+        left: 3px;
+    }
+    .friend-button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -27px;
+    }
+    .friend-button a {
+        border-radius: 40px;
+    }
+    .friend-all .tag-post {
+        margin-bottom: 30px;
+    }
+    .button-caution {
+        background-color: #FF4351;
+        border-color: #FF4351;
+        color: #FFF;
+    }
+    .button {
+        font-weight: 300;
+        font-size: 16px;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 40px;
+        margin: 0;
+        display: inline-block;
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+    }
+    .title {
+        margin-bottom: 0rem !important;
+    }
+    .card {
+        margin: 3rem 0 1rem 0 !important;
+    }
+    .button-glow.button-caution {
+        -webkit-animation-name: glowing-caution;
+        animation-name: glowing-caution;
+    }
+    @-webkit-keyframes glowing-caution {
+        from {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
         }
-        
-        .biaotiss {
-            /* padding: 8px 10px; */
-            color: #4c4c4e;
-            text-align: center;
-            font-weight: 400;
-            font-size: 18px;
+        50% {
+            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
         }
-        
-        .img-item {
-            padding: .2rem;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 1px 2px 2px 0 #aaa;
-            transition: all .4s cubic-bezier(.63, .15, .03, 1.12);
-            /* margin-bottom: 20px; */
-            margin-bottom: 0px;
+        to {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
         }
-        
-        .photo:nth-child(odd) {
-            transform: rotateZ(0deg);
+    }
+    @keyframes glowing-caution {
+        from {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
         }
-        
-        .photo:nth-child(even) {
-            transform: rotateZ(0deg);
+        50% {
+            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
         }
-        
-        .text_des {
-            position: absolute;
-            width: 92%;
-            height: 100%;
-            top: 0;
-            color: #000;
-            overflow: hidden;
+        to {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
         }
-        
-        .text_des h3 {
-            margin: 5px 0 8px 0px;
-            right: 40px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            line-height: 1.7rem;
-            position: absolute;
-            top: 10%;
-            font-style: italic;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-            /*transform: translateX(200px); */
-        }
-        
-        .text_des p {
-            left: 15px;
-            position: absolute;
-            top: 50%;
-            /* transform: translateX(-200px); transition-delay: 0.2s; */
-        }
-        
-        .my-gallery .photo img {
-            border-radius: 10px;
-            /* height: 240px; */
-            height: 340px;
-        }
-        
-        .card .card-content {
-            padding: 24px 24px 24px 24px;
-        }
-        
-        .miaoshus {
-            padding: 20px;
-            border: 1px dashed #e6e6e6;
-            color: #969696;
-            position: relative;
-            display: inline-block;
-            width: 95%;
-            background: #fbfbfb50;
-            border-radius: 10px;
-            font-size: 16px;
-            margin: 12px auto;
-        }
-        
-        body.dark .miaoshus {
-            background: 0 0;
-            border: 1px dashed #888;
-        }
-        
-        .img-item {
-            transition: all 0.4s ease-out;
-        }
-        
-        .img-item a img {
-            opacity: 1;
-            transition: all 0.4s ease-out;
-        }
-        
-        .img-item a:hover img {
-            opacity: 0.8;
-        }
-        
-        .biaotiss {
-            font-family: MV Boli;
-        }
-        
-        .miaoshus .title {
-            font-family: MV Boli;
-        }
-        /*大屏幕下(桌面类)的样式*/
-        
-        @media only screen and (min-width: 993px) {
-            .text_des h3 {
-                transform: translateX(200px);
-            }
-            .text_des p {
-                transform: translateX(-200px);
-                transition-delay: 0.2s;
-            }
-            .animate-text {
-                opacity: 0;
-                transition: all 0.6s ease-in-out;
-            }
-        }
-        /*小屏幕下(桌面类)的样式*/
-        
-        @media only screen and (max-width: 500px) {
-            .my-gallery .photo img {
-                height: 186px;
-            }
-        }
-    </style>
-    <main class="content">
-        <div class="container chip-container">
-            <div class="card">
-                <div class="card-content">
-                    <div class="tag-title center-align">
-                        <div class="miaoshus">
-                            <div class="title center-align">
-                                “生日快乐”
-                                <br>
-                                
-                                    <span id="lovetime"> Loading ...</span>
-                                    <script>
-                                        function loveTime() {
-                                            var seconds = 1000;
-                                            var minutes = seconds * 60;
-                                            var hours = minutes * 60;
-                                            var days = hours * 24;
-                                            var years = days * 365;
-                                            var today = new Date();
-                                            var startYear = "2021";
-                                            var startMonth = "9";
-                                            var startDate = "24";
-                                            var startHour = "0";
-                                            var startMinute = "0";
-                                            var startSecond = "0";
-                                            var todayYear = today.getFullYear();
-                                            var todayMonth = today.getMonth() + 1;
-                                            var todayDate = today.getDate();
-                                            var todayHour = today.getHours();
-                                            var todayMinute = today.getMinutes();
-                                            var todaySecond = today.getSeconds();
-                                            var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                                            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                                            var diff = t2 - t1 + 1;
-                                            var diffYears = Math.floor(diff / years);
-                                            var diffDays = Math.floor((diff / days) - diffYears * 365);
-                                            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                                            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-                                            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-                                            if (startYear == todayYear) {
-                                                document.getElementById("year").innerHTML = todayYear;
-                                                document.getElementById("lovetime").innerHTML = "♥和hxx妹妹的第 " + diffDays + " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒♥"
-                                            } else {
-                                                document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                                                document.getElementById("lovetime").innerHTML = "♥和hxx妹妹的第 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒♥";
-                                            }
-                                        }
-                                        setInterval(loveTime, 1000);
-                                    </script>
-                                
-                                </br>
-                            </div>
-                                “ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”
-                        </div>
-                    </div>
-                    <div class="my-gallery">
-                        <div class="row">
-                            
-                            
-                                
-                                    
-                                    
-                                        <div class="photo col s12 m6 l4">
-                                            <div class="img-item"> 
-                                                <a href="./gallery1"> 
-                                                    <img src="/medias/loading.svg" data-src="/medias/images/01.jpg" class="responsive-img" alt="img"+0 /> 
-                                                    <div class="biaotiss">
-                                                        <!-- “ gallery1 ”<br>“ 2021-12 ” -->
-                                                        <!-- gallery1 -->
-                                                    </div> 
-                                                </a>                                                        
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <div class="photo col s12 m6 l4">
-                                            <div class="img-item"> 
-                                                <a href="./gallery2"> 
-                                                    <img src="/medias/loading.svg" data-src="/medias/images/02.jpg" class="responsive-img" alt="img"+1 /> 
-                                                    <div class="biaotiss">
-                                                        <!-- “ gallery2 ”<br>“ 2021-12 ” -->
-                                                        <!-- gallery2 -->
-                                                    </div> 
-                                                </a>                                                        
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <div class="photo col s12 m6 l4">
-                                            <div class="img-item"> 
-                                                <a href="./gallery3"> 
-                                                    <img src="/medias/loading.svg" data-src="/medias/images/03.jpg" class="responsive-img" alt="img"+2 /> 
-                                                    <div class="biaotiss">
-                                                        <!-- “ gallery3 ”<br>“ 2021-12 ” -->
-                                                        <!-- gallery3 -->
-                                                    </div> 
-                                                </a>                                                        
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <div class="photo col s12 m6 l4">
-                                            <div class="img-item"> 
-                                                <a href="./gallery4"> 
-                                                    <img src="/medias/loading.svg" data-src="/medias/images/04.jpg" class="responsive-img" alt="img"+3 /> 
-                                                    <div class="biaotiss">
-                                                        <!-- “ gallery4 ”<br>“ 2021-12 ” -->
-                                                        <!-- gallery4 -->
-                                                    </div> 
-                                                </a>                                                        
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <div class="photo col s12 m6 l4">
-                                            <div class="img-item"> 
-                                                <a href="./gallery5"> 
-                                                    <img src="/medias/loading.svg" data-src="/medias/images/05.jpg" class="responsive-img" alt="img"+4 /> 
-                                                    <div class="biaotiss">
-                                                        <!-- “ gallery5 ”<br>“ 2021-12 ” -->
-                                                        <!-- gallery5 -->
-                                                    </div> 
-                                                </a>                                                        
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <div class="photo col s12 m6 l4">
-                                            <div class="img-item"> 
-                                                <a href="./gallery6"> 
-                                                    <img src="/medias/loading.svg" data-src="/medias/images/06.jpg" class="responsive-img" alt="img"+5 /> 
-                                                    <div class="biaotiss">
-                                                        <!-- “ gallery6 ”<br>“ 2021-12 ” -->
-                                                        <!-- gallery6 -->
-                                                    </div> 
-                                                </a>                                                        
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <div class="photo col s12 m6 l4">
-                                            <div class="img-item"> 
-                                                <a href="./gallery7"> 
-                                                    <img src="/medias/loading.svg" data-src="/medias/images/07.jpg" class="responsive-img" alt="img"+6 /> 
-                                                    <div class="biaotiss">
-                                                        <!-- “ gallery7 ”<br>“ 2021-12 ” -->
-                                                        <!-- gallery7 -->
-                                                    </div> 
-                                                </a>                                                        
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <div class="photo col s12 m6 l4">
-                                            <div class="img-item"> 
-                                                <a href="./gallery8"> 
-                                                    <img src="/medias/loading.svg" data-src="/medias/images/08.jpg" class="responsive-img" alt="img"+7 /> 
-                                                    <div class="biaotiss">
-                                                        <!-- “ gallery8 ”<br>“ 2021-12 ” -->
-                                                        <!-- gallery8 -->
-                                                    </div> 
-                                                </a>                                                        
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    
-                                    
-                                        <div class="photo col s12 m6 l4">
-                                            <div class="img-item"> 
-                                                <a href="./gallery9"> 
-                                                    <img src="/medias/loading.svg" data-src="/medias/images/09.jpg" class="responsive-img" alt="img"+8 /> 
-                                                    <div class="biaotiss">
-                                                        <!-- “ gallery9 ”<br>“ 2021-12 ” -->
-                                                        <!-- gallery9 -->
-                                                    </div> 
-                                                </a>                                                        
-                                            </div>
-                                        </div>
-                                    
-                                
-                            
-                        </div>
-                    </div>
+    }
+    .button-caution:hover {
+        background-color: #ff7680;
+        border-color: #ff7680;
+        color: #FFF;
+        text-decoration: none;
+    }
+    .frind-card1 {
+        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    }
+    .frind-card2 {
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .frind-card3 {
+        background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    }
+    .frind-card4 {
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    }
+    .frind-card5 {
+        background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    }
+    .frind-card6 {
+        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    }
+    .frind-card7 {
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    }
+    .frind-card8 {
+        background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    }
+    .frind-card9 {
+        background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    }
+    .frind-card10 {
+        background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    }
+    article .card {
+        overflow: visible !important;
+    }
+</style>
+
+<main class="content">
+    <div class="container friends-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;友情链接
                 </div>
+                <article id="friends-link">
+                    
+                </article>
             </div>
-            <script>
-                baguetteBox.run('.gallery', {
-                    // 配置参数
-                    buttons:Boolean,//是否显示导航按钮。
-                    noScrollbars:true,//是否在显示时隐藏滚动条。
-                    titleTag:true,//是否使用图片上的title属性作为图片标题
-                    async:true,//是否异步加载文件。
-                });
-                start()
-                    $(window).on('scroll', function() {
-                    start();
-                })
+        </div>
 
-                function start() { 
-                    //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
-                    $('.container img').not('[data-isLoaded]').each(function(){
-                        var $node = $(this)
-                        if( isShow($node) ) {
-                            loadImg($node);
-                        }
-                    });
-                }
+        
 
-                //判断一个元素是不是出现在窗口(视野)
-                function isShow($node){
-                    return $node.offset().top <= $(window).height() + $(window).scrollTop();
-                }
+        <div class="card">
 
-                //加载图片
-                function loadImg($img){
-                    //.attr(值)
-                    //.attr(属性名称,值)
-                    $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
-                    $img.attr('data-isLoaded', 1);//已加载的图片做标记
-                }
-            </script>
-    </main>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+    </div>
+</main>
+
+<script>
+    $(function () {
+        $('#friends-link').masonry({
+            itemSelector: '.friend-div'
+        });
+    });
+</script>
 
     <footer class="page-footer bg-color">
     
