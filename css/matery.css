@@ -555,7 +555,9 @@ header .go-back i {
     animation: rainbow 60s infinite;
 }
 
-.bg-cover:before,
+.bg-cover:before{
+    background-image: url(/medias/bggrid.png);
+}
 .bg-cover:after {
     position: absolute;
     z-index: 1;
