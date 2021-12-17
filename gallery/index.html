@@ -416,9 +416,9 @@
                                 “生日快乐”
                                 <br>
                                 
-                                    <span id="sitetime"> Loading ...</span>
+                                    <span id="lovetime"> Loading ...</span>
                                     <script>
-                                        var calcSiteTime = function () {
+                                        var calcLoveTime = function () {
                                             var seconds = 1000;
                                             var minutes = seconds * 60;
                                             var hours = minutes * 60;
@@ -450,15 +450,15 @@
                                             if (startYear === String(todayYear)) {
                                                 document.getElementById("year").innerHTML = todayYear;
                                                 var daysTip = '♥甜甜的恋爱第 ' + diffDays + ' 天' + diffHours + ' 时' + diffMinutes + ' 分' + diffSeconds + ' 秒♥';
-                                                document.getElementById("sitetime").innerHTML = daysTip;
+                                                document.getElementById("lovetime").innerHTML = daysTip;
                                             } else {
                                                 document.getElementById("year").innerHTML = startYear + " - " + todayYear;
                                                 var yearsAndDaysTip = '♥甜甜的恋爱第 ' + diffYears + ' 年 ' + diffDays + ' 天' + diffHours + ' 时' + diffMinutes + ' 分' + diffSeconds + ' 秒♥';
-                                                document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                                                document.getElementById("lovetime").innerHTML = yearsAndDaysTip;
                                             }
                                         }
                     
-                                        calcSiteTime();
+                                        calcLoveTime();
                                     </script>
                                 
                                 </br>
