@@ -2145,5 +2145,5 @@ p.search-result-summary{
 }
 
 .bg-cover::before {
-    background-image: url(medias/bggrid.png);
+    background-image: url(/medias/bggrid.png);
 }
