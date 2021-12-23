@@ -275,7 +275,7 @@
 
     
         <script>
-                var bannerUrl = "/medias/banner/" + 5 + '.jpg';
+                var bannerUrl = "/medias/banner/" + 1988 + '.jpg';
                 $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
         </script>
     
@@ -283,11 +283,34 @@
 
     </div>
 </div>
+
+
+<style>
+    #index-video { z-index: -1; position: absolute; top: 0; left: 0; height: 100vh; width: 100%; object-fit: cover;}
+    @media only screen and (max-width: 760px) { #index-video { display: none;}}
+    @media only screen and (min-width: 760px) { .bg-cover { background-image: none!important;}}
+</style>
+<video id="index-video" autoplay loop muted>
+
+
+    <source src="/medias/videos/gallerybg.mp4">
+
+</video>
+
     <link rel="stylesheet" href="/libs/baguetteBox/css/baguetteBox.css">
     <!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
     <script src="/libs/baguetteBox/js/baguetteBox.js"></script>
     <!-- 增加相册显示的特效样式 -->
     <style>
+        #index-video { z-index: -1; position: absolute; top: 0; left: 0; height: 110vh; width: 100%; object-fit: cover;}
+        .about-cover {
+            height: 110vh;
+        }
+        @media only screen and (max-width: 600px) {
+            .about-cover {
+            height: 64vh;
+            }
+        }
         .photo {
             /* padding: 0 40px!important; */
             padding: 0 0px!important;
@@ -732,7 +755,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">83</span>
+                        class="white-color">166</span>
             
             
             
