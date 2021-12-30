@@ -694,7 +694,7 @@
                     });
                 }
                 // 窗口大小改变
-                $(window).resize(function () {
+                $(window).on('scroll', function(){
                     waterfallHandler();
                 });
             });
