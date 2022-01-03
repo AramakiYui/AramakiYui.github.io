@@ -950,7 +950,7 @@
                     var startYear = "2021";
                     var startMonth = "9";
                     var startDate = "24";
-                    var startHour = "0";
+                    var startHour = "24";
                     var startMinute = "0";
                     var startSecond = "0";
                     var todayYear = today.getFullYear();
@@ -967,7 +967,7 @@
                     var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
                     var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
                     var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
+                    if (diffYears == 0) {
                         document.getElementById("year").innerHTML = todayYear;
                         document.getElementById("sitetime").innerHTML = "本站已运行 " + diffDays + " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒";
                     } else {
