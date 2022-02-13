@@ -477,12 +477,14 @@
                                             var todaySecond = today.getSeconds();
                                             var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
                                             var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                                            var diff = t2 - t1 + 3;
+                                            var diff = t2 - t1 + 1;
                                             var diffYears = Math.floor(diff / years);
                                             var diffDays = Math.floor((diff / days) - diffYears * 365);
                                             var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
                                             var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
                                             var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+                                            // 改时间搜这里
+                                            diffDays = diffDays + 3;
                                             if (diffYears == 0) {
                                                 document.getElementById("year").innerHTML = todayYear;
                                                 document.getElementById("lovetime").innerHTML = "❤️和hxx妹妹在一起的第 " + diffDays + " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒❤️"
@@ -681,6 +683,8 @@
                     var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
                     var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
                     var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+                    // 改时间搜这里
+                    diffDays = diffDays + 3;
                     if (diffYears == 0) {
                         document.getElementById("year").innerHTML = todayYear;
                         document.getElementById("sitetime").innerHTML = "本站已运行 " + diffDays + " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒";
